@@ -11,8 +11,14 @@ Tests to get Binder working. Specifically, working through the following resourc
 1. Binder includes various hidden files in the project root folder (that have not been specified in the repo). I decided to ignore these for the purpose of the repo (on the basis that they are generated from the other files).
     - To list all files and folders from a JupyterLab Terminal: `$ ls -al`
     - To open a *hidden* file from JupyterLab: `File` - `Open from path...`.
-1. Security is *not* guaranteed for pushing changes from Binder to the GitHub remote repo. That is, **do not enter your GitHub credentials** (which are required to push) to Binder (e.g. in the Terminal of JupyterLab). As per: <https://mybinder.readthedocs.io/en/latest/faq.html#can-i-push-data-from-my-binder-session-back-to-my-repository>. Workaround (a bit manual, but there is not another way):
+1. Security is *not* guaranteed for pushing changes from Binder to the GitHub remote repo. That is, **do not enter your GitHub credentials** (which are required to push) to Binder (e.g. in the Terminal of JupyterLab). As per: <https://mybinder.readthedocs.io/en/latest/faq.html#can-i-push-data-from-my-binder-session-back-to-my-repository>. 
+    
+    Workaround (a bit manual, but there is not another way):
     - Have a cloned copy of the repo on your local machine.
     - Amend files in Binder. When you want to make a commit, download the files that have changed and replace them in the local machine's clone.
     - Commit from local and push to remote.
     - Pull from Binder Terminal. (You will probably first need to `git reset --hard HEAD` or at least `stash` because you'll be trying to overwrite files that have changed.)
+1. Binder has limited computation resources. Specifically:
+    > Users are guaranteed at least 1GB of RAM, with a maximum of 2GB
+    
+    As per: <https://mybinder.readthedocs.io/en/latest/faq.html#how-much-memory-am-i-given-when-using-binder>
