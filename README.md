@@ -15,4 +15,4 @@ Tests to get Binder working. Specifically, working through the following resourc
     - Have a cloned copy of the repo on your local machine.
     - Amend files in Binder. When you want to make a commit, download the files that have changed and replace them in the local machine's clone.
     - Commit from local and push to remote.
-    - Pull from Binder Terminal.
+    - Pull from Binder Terminal. (You will probably first need to `git reset --hard HEAD` or at least `stash` because you'll be trying to overwrite files that have changed.)
