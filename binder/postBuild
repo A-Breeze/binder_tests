@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Stop everything if one command fails
+set -e
+
 # Install a JupyterLab extension for demonstration purposes
 jupyter labextension install @jupyterlab/toc
+
+# Build jupyter lab to include extensions
+jupyter lab build
 
