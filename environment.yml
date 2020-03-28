@@ -4,4 +4,7 @@ channels:
   - conda-forge
 dependencies:
   - python==3.6.9
+  - ipykernel==5.1.4
+  - notebook==6.0.3
+  - jupyterlab==2.0.0
   - jupytext==1.4.0
