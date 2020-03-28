@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# This file specifies commands to run when the Binder container starts
+# --------------------------------------------------------------------
+
+# Stop everything if one command fails
+set -e
+
+# Install additional JupyterLab extensions
+jupyter labextension install @jupyterlab/toc@3.0.0
+
+# Install upgraded JupyterLab extensions 
+# (these are only necessary to get the specific version)
+jupyter labextension install jupyter-offlinenotebook@0.1.0
+jupyter labextension install jupyterlab-jupytext@1.2.1
+
+# Build jupyter lab to include extensions
+jupyter lab build
+
