@@ -1,4 +1,4 @@
-name: py369
+name: binder_test
 channels:
   - defaults
   - conda-forge
