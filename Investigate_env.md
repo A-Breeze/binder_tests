@@ -1,1 +1,42 @@
-{"metadata":{"kernelspec":{"display_name":"Python 3","language":"python","name":"python3"},"jupytext":{"text_representation":{"extension":".md","format_name":"markdown","format_version":"1.2","jupytext_version":"1.4.0"}},"language_info":{"name":""}},"nbformat_minor":4,"nbformat":4,"cells":[{"cell_type":"markdown","source":"# Investigate environment\nCommands to check that the environment has correctly activated.","metadata":{}},{"cell_type":"code","source":"# Import built-in modules\nimport os\nimport sys\n\nprint(f\"Python version running: {sys.version}\")\nprint(f\"Runing here: \\t\\t{sys.executable}\")","metadata":{"trusted":true},"execution_count":null,"outputs":[]},{"cell_type":"markdown","source":"Use *bang* notation (`!`) to run console commands from a Jupyter Notebook","metadata":{}},{"cell_type":"code","source":"# This is a Git repo that can push to the following remote\n!git remote -v","metadata":{"trusted":true},"execution_count":null,"outputs":[]},{"cell_type":"code","source":"# The notebook is running in an environment called \"notebook\"\n# This is *irrespective* of the name given in the environment.yml file\n!conda env list","metadata":{"trusted":true},"execution_count":null,"outputs":[]},{"cell_type":"code","source":"","metadata":{"trusted":true},"execution_count":null,"outputs":[]}]}
+---
+jupyter:
+  jupytext:
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.2'
+      jupytext_version: 1.4.0
+  kernelspec:
+    display_name: Python 3
+    language: python
+    name: python3
+---
+
+# Investigate environment
+Commands to check that the environment has correctly activated.
+
+```python
+# Import built-in modules
+import os
+import sys
+
+print(f"Python version running: {sys.version}")
+print(f"Runing here: \t\t{sys.executable}")
+```
+
+Use *bang* notation (`!`) to run console commands from a Jupyter Notebook
+
+```python
+# This is a Git repo that can push to the following remote
+!git remote -v
+```
+
+```python
+# The notebook is running in an environment called "notebook"
+# This is *irrespective* of the name given in the environment.yml file
+!conda env list
+```
+
+```python
+
+```
