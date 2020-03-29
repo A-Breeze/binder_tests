@@ -10,5 +10,7 @@ dependencies:
   - jupyter-offlinenotebook==0.1.0
   - jupyterlab==2.0.0
   - jupytext==1.4.0
+  - jupyter-archive==0.6.2
+  - pyprojroot==0.2.0
   - pip:
     - -r file:requirements.txt
