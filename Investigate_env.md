@@ -17,7 +17,6 @@ Commands to check that the environment has correctly activated.
 
 ```python
 # Import built-in modules
-import os
 import sys
 
 print(f"Python version running: {sys.version}")
@@ -25,6 +24,11 @@ print(f"Runing here: \t\t{sys.executable}")
 ```
 
 Use *bang* notation (`!`) to run console commands from a Jupyter Notebook
+
+```python
+print("Jupyter packages and versions installed:")
+!jupyter --version
+```
 
 ```python
 # This is a Git repo that can push to the following remote
@@ -38,5 +42,26 @@ Use *bang* notation (`!`) to run console commands from a Jupyter Notebook
 ```
 
 ```python
+# Get a list of all conda packages installed:
+# !conda list
 
+# We'll just examine a few in the below
 ```
+
+```python
+import pip
+
+print(f"pip version:\t{pip.__version__}")
+print("Running here:")
+!which pip
+```
+
+```python
+import jupytext
+
+print(f"jupytext version:\t{jupytext.__version__}")
+print("Running here:")
+!which jupytext
+```
+
+
