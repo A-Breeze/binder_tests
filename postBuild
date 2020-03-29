@@ -13,7 +13,6 @@ jupyter labextension install @jupyterlab/toc@3.0.0
 # (these are only necessary to get the specific version)
 jupyter labextension install jupyter-offlinenotebook@0.1.0
 jupyter labextension install jupyterlab-jupytext@1.2.1
-jupyter labextension install @hadim/jupyter-archive@0.6.2
 
 # Build jupyter lab to include extensions
 jupyter lab build
