@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/jl_extensions?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/conda_pip?urlpath=lab)
 
 # binder_tests
 Tests to get Binder working. Specifically, working through the following resources to in an attempt to get the following functionality to work:
