@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/jl_extensions?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/conda_pip?urlpath=lab)
 
 # binder_tests
 Tests to get Binder working. Specifically, working through the following resources to in an attempt to get the following functionality to work:
@@ -6,9 +6,12 @@ Tests to get Binder working. Specifically, working through the following resourc
     1. Using **JupyterLab**
     1. Using **Git** in the Terminal of JupyterLab to commit and push/pull from the remote on GitHub
 2. Add **JupyterLab extensions** by commands in the `postBuild` file for Binder <https://github.com/binder-examples/jupyterlab/blob/master/binder/postBuild> and <https://github.com/mwouts/jupytext/blob/master/binder/postBuild>. Included:
-    1. **Jupytext** (just need to install the conda package)
+    1. **Jupytext**
     1. **Table of Contents**
-    1. **Offline notebook** to allow you to easily download a notebook. 
+    1. **Offline notebook** to allow you to easily download a notebook.
+3. Further dependencies specified in a conda environment:
+    1. Call **pip** `requirements.txt` from the `environment.yml` (see `conda` example [here]<https://github.com/conda/conda/blob/master/tests/conda_env/support/advanced-pip/environment.yml>).
+    1. Install standard data science packages: **numpy**, **pandas**, **scikit-learn**, **matplotlib**
 
 ## Limitations found
 1. Jupyter does not (by default) show *hidden* files and folders (i.e. whose name begins with a dot `.`) in the file explorer, e.g. `.gitignore`. This is an open issue, see: <https://github.com/jupyterlab/jupyterlab/issues/2049>.
