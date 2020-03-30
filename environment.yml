@@ -4,15 +4,16 @@ channels:
   - conda-forge
 dependencies:
   - python==3.6.9
-  - pip==20.0.2
-  - ipykernel==5.1.4
-  - notebook==6.0.3
-  - jupyter-offlinenotebook==0.0.11
-  - jupyterlab==1.2.6
-  - jupyter-server-proxy==1.2.0
   - jupyter-vscode-proxy==0.1
-  - jupytext==1.2.1
-  - jupyter-archive==0.6.2
-  - pyprojroot==0.2.0
-  - pip:
-    - -r file:requirements.txt
+
+  #- jupyter-server-proxy==1.2.0
+  #- pip==20.0.2
+  #- ipykernel==5.1.4
+  #- notebook==6.0.3
+  #- jupyter-offlinenotebook==0.0.11
+  #- jupyterlab==1.2.6
+  #- jupytext==1.2.1
+  #- jupyter-archive==0.6.2
+  #- pyprojroot==0.2.0
+  #- pip:
+  #  - -r file:requirements.txt
