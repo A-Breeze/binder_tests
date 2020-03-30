@@ -11,7 +11,7 @@ dependencies:
   - jupyterlab==1.2.6
   - jupyter-server-proxy==1.2.0
   - jupyter-vscode-proxy==0.1
-  - jupytext==1.4.0
+  - jupytext==1.2.1
   - jupyter-archive==0.6.2
   - pyprojroot==0.2.0
   - pip:
