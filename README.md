@@ -1,4 +1,4 @@
-d[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/master?urlpath=lab)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/master?urlpath=lab)
 
 # binder_tests
 Tests to get Binder working. Specifically, working through the following resources to in an attempt to get the following functionality to work:
@@ -13,7 +13,7 @@ Tests to get Binder working. Specifically, working through the following resourc
     1. Call **pip** `requirements.txt` from the `environment.yml` (see `conda` example [here](https://github.com/conda/conda/blob/master/tests/conda_env/support/advanced-pip/environment.yml)).
     1. Install standard data science packages: **numpy**, **pandas**, **scikit-learn**, **matplotlib**
 4. **COULD NOT GET THIS TO WORK** Add ability to use **VSCode** from the JupyterLab launcher in Binder. See:
-    - GitHub page for the package: <https://github.com/betatim/vscode-binder>$\Leftarrow$ start Binder from here to use VSCode on mybinder.org
+    - GitHub page for the package: <https://github.com/betatim/vscode-binder> <- start Binder from here to use VSCode on mybinder.org
     - conda package `jupyter-vscode-proxy`: <https://anaconda.org/conda-forge/jupyter-vscode-proxy>
 
 ## Limitations found
