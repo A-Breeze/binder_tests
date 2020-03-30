@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/conda_pip?urlpath=lab)
+d[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/A-Breeze/binder_tests/master?urlpath=lab)
 
 # binder_tests
 Tests to get Binder working. Specifically, working through the following resources to in an attempt to get the following functionality to work:
@@ -10,8 +10,11 @@ Tests to get Binder working. Specifically, working through the following resourc
     1. **Table of Contents**
     1. **Offline notebook** to allow you to easily download a notebook.
 3. Further dependencies specified in a conda environment:
-    1. Call **pip** `requirements.txt` from the `environment.yml` (see `conda` example [here]<https://github.com/conda/conda/blob/master/tests/conda_env/support/advanced-pip/environment.yml>).
+    1. Call **pip** `requirements.txt` from the `environment.yml` (see `conda` example [here](https://github.com/conda/conda/blob/master/tests/conda_env/support/advanced-pip/environment.yml)).
     1. Install standard data science packages: **numpy**, **pandas**, **scikit-learn**, **matplotlib**
+4. **COULD NOT GET THIS TO WORK** Add ability to use **VSCode** from the JupyterLab launcher in Binder. See:
+    - GitHub page for the package: <https://github.com/betatim/vscode-binder>$\Leftarrow$ start Binder from here to use VSCode on mybinder.org
+    - conda package `jupyter-vscode-proxy`: <https://anaconda.org/conda-forge/jupyter-vscode-proxy>
 
 ## Limitations found
 1. Jupyter does not (by default) show *hidden* files and folders (i.e. whose name begins with a dot `.`) in the file explorer, e.g. `.gitignore`. This is an open issue, see: <https://github.com/jupyterlab/jupyterlab/issues/2049>.
@@ -31,6 +34,7 @@ Tests to get Binder working. Specifically, working through the following resourc
     As per: <https://mybinder.readthedocs.io/en/latest/faq.html#how-much-memory-am-i-given-when-using-binder>
 1. The Binder configuration files must all be in the same directory, e.g. you *cannot* have `./environment.yml` (in the root) and `./binder/postBuild` (in a subfolder).
 1. The jupytext extension for JupyterLab requires JupyterLab 2.0, and the Binder default version for JupyterLab was 1.2.6 when I tried it (that's the most recent version that is in Anaconda Cloud, but there are more recent versions on conda-forge), so you need to specify a more up-to-date version of JupyterLab in the `environment.yml`.
+1. The JupyterLab extension `jupyter-server-proxy` needed for `jupyter-vscode-proxy` to work does not work (at time of writing) with JupyterLab 2.0. Therefore, we need to downgrade back to JupyterLab 1.2.6. This means we need to downgrade jupytext (e.g. to conda package 1.2.1), as per the bullet above.
 
 ## Further notes
 ### JupyterLab extensions
@@ -44,6 +48,3 @@ We can specify specific versions of JupyterLab extensions in the commands run in
 > npm view my-extension versions  # Get a list of all available versions of a package
 ```
 See <https://jupyterlab.readthedocs.io/en/stable/user/extensions.html#installing-extensions> and <https://stackoverflow.com/q/41415945>.
-
-
-
