@@ -48,3 +48,11 @@ We can specify specific versions of JupyterLab extensions in the commands run in
 > npm view my-extension versions  # Get a list of all available versions of a package
 ```
 See <https://jupyterlab.readthedocs.io/en/stable/user/extensions.html#installing-extensions> and <https://stackoverflow.com/q/41415945>.
+
+### Version of Linux
+To get the flavour and version of Linux that the Binder instance is running, run the following in a console:
+```
+> cat /proc/version
+> cat /etc/*-release  # Further info
+```
+See <https://stackoverflow.com/a/28207798>.
