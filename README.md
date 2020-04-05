@@ -32,7 +32,7 @@ Tests to get Binder working. Specifically, working through the following resourc
     > Users are guaranteed at least 1GB of RAM, with a maximum of 2GB
     
     As per: <https://mybinder.readthedocs.io/en/latest/faq.html#how-much-memory-am-i-given-when-using-binder>
-1. The Binder configuration files must all be in the same directory, e.g. you *cannot* have `./environment.yml` (in the root) and `./binder/postBuild` (in a subfolder).
+1. You can put the Binder configuration files (i.e. `environment.yml`, `postBuild`. `requirements.txt`, `runtime.txt`, `Dockerfile`) in a subdirectory called `binder/` (or `.binder/` but not both). If you have a subdirectory, then any configuration files *not* in the subdirectory are ignored by Binder, e.g. you *cannot* have `environment.yml` (in the root) and `binder/postBuild` (in a subfolder). See <https://mybinder.readthedocs.io/en/latest/faq.html#can-i-put-my-configuration-files-outside-the-root-of-my-repository>.
 1. The jupytext extension for JupyterLab requires JupyterLab 2.0, and the Binder default version for JupyterLab was 1.2.6 when I tried it (that's the most recent version that is in Anaconda Cloud, but there are more recent versions on conda-forge), so you need to specify a more up-to-date version of JupyterLab in the `environment.yml`.
 1. The JupyterLab extension `jupyter-server-proxy` needed for `jupyter-vscode-proxy` to work does not work (at time of writing) with JupyterLab 2.0. Therefore, we need to downgrade back to JupyterLab 1.2.6. This means we need to downgrade jupytext (e.g. to conda package 1.2.1), as per the bullet above.
 
